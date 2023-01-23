@@ -1,0 +1,156 @@
+body {
+  font-family: "Poppins", sans-serif;
+  font-family: "Italiana", serif;
+  font-family: "Ruluko", sans-serif;
+}
+/* Fonts start here */
+h1 {
+  font-family: "Italiana", serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: black;
+  text-align: center;
+  text-shadow: 2px 2px 5px cornsilk;
+}
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: darkblue;
+  text-align: center;
+}
+h3 {
+  font-family: "Ruluko", sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  color: cornflowerblue;
+  text-align: center;
+}
+p {
+  font-family: "Ruluko", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  text-align: left;
+  margin: 10px;
+}
+a {
+  font-family: "Ruluko", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  text-align: left;
+  margin: 20px;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 90px 700px 1fr;
+  grid-template-areas:
+    "hd hd hd hd hd hd hd hd"
+    "sd sd main main main main main main"
+    "ft ft ft ft ft ft ft ft";
+  margin: 20px;
+}
+.box {
+  box-sizing: border-box;
+}
+/* Header starts here */
+.header {
+  grid-area: hd;
+  background-color: darkblue;
+  background-image: linear-gradient(
+    to bottom right,
+    darkblue,
+    cornflowerblue,
+    cornsilk
+  );
+}
+/* Sidebar starts here */
+.sidebar {
+  grid-area: sd;
+  background-color: cornsilk;
+}
+/* Main Content starts here */
+.content {
+  display: grid;
+  grid-area: main;
+  height: fit-content;
+  display: flex;
+}
+/* Card starts here */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+div.polaroid {
+  width: 50%;
+  height: fit-content;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  margin: 20px;
+  flex: 25%;
+}
+div.container1 {
+  padding: 5px;
+  height: fit-content;
+  flex: 60%;
+  margin: 10px;
+}
+.img {
+  width: 100%;
+}
+.button {
+  background-color: #e7e7e7;
+  border: 1px solid cornflowerblue;
+  color: black;
+  padding: 10px;
+  margin: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+/* Footer starts here */
+.footer {
+  grid-area: ft;
+  background-color: cornflowerblue;
+}
+/* Responsive layout */
+@media (max-width: 320px) {
+  .container {
+    display: grid;
+    height: 200vh;
+    width: 100%;
+    grid-template-columns: 290px;
+    grid-template-rows: 150px 175px 1fr;
+    grid-template-areas:
+      "hd"
+      "sd"
+      "main"
+      "ft";
+    border: 5px solid yellow;
+  }
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  div.polaroid {
+    width: 50%;
+    height: fit-content;
+    flex: 12.5%;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+  .container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 290px;
+    grid-template-rows: 175px 450px 1fr;
+    grid-template-areas:
+      "hd hd hd hd hd hd hd hd"
+      "sd main main main main main main main"
+      "ft ft ft ft ft ft ft ft";
+    border: 5px solid purple;
+  }
+}

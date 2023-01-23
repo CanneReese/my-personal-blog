@@ -1,0 +1,173 @@
+body {
+  font-family: "Poppins", sans-serif;
+  font-family: "Italiana", serif;
+  font-family: "Ruluko", sans-serif;
+}
+h1 {
+  font-family: "Italiana", serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: black;
+  text-align: center;
+  text-shadow: 2px 2px 5px cornsilk;
+}
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: darkblue;
+  text-align: left;
+}
+h3 {
+  font-family: "Ruluko", sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  color: cornflowerblue;
+  text-align: center;
+}
+h4 {
+  font-family: "Italiana", serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: cornsilk;
+  background-color: darkblue;
+}
+h5 {
+  font-family: "Ruluko", sans-serif;
+  font-size: 0.8em;
+  font-weight: 400;
+  color: black;
+}
+p {
+  font-family: "Ruluko", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  text-align: left;
+  margin: 10px;
+}
+a {
+  font-family: "Ruluko", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  text-align: left;
+  margin: 10px;
+}
+em {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+blockquote {
+  font-family: "Poppins", sans-serif;
+  color: black;
+  border-left: 2px solid darkblue;
+  padding: 5px;
+}
+.container {
+  display: grid;
+  grid-template-rows: 100px 350px 1600px 100px;
+  grid-template-columns: repeat(3, 1 fr);
+  grid-template-areas:
+    "hd hd hd hd hd hd hd hd"
+    "feat feat feat feat feat feat feat feat"
+    "main main main main main main main main"
+    "ft ft ft ft ft ft ft ft";
+}
+.box {
+  box-sizing: content-box;
+  width: 100%;
+  padding: 5px;
+}
+.header {
+  grid-area: hd;
+  background-size: contain;
+  text-align: center;
+  background-color: darkblue;
+  background-image: linear-gradient(
+    to bottom right,
+    darkblue,
+    cornflowerblue,
+    cornsilk
+  );
+}
+.feature {
+  grid-area: feat;
+  padding: 10px;
+  background-color: cornsilk;
+}
+.user {
+  display: flex;
+  margin-top: auto;
+  padding: 5px;
+}
+.avatar {
+  vertical-align: left;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.user-info h5 {
+  margin: 3px;
+}
+.content {
+  grid-area: main;
+  padding: 10px;
+  max-height: auto;
+  display: flexbox;
+}
+figure {
+  border: 1px solid #e7e7e7;
+  padding: 4px;
+  margin: auto;
+}
+figcaption {
+  background-color: darkblue;
+  color: cornsilk;
+  font-style: italic;
+  padding: 2px;
+  text-align: center;
+}
+ul {
+  list-style-type: square;
+}
+ol {
+  list-style-type: none;
+}
+.footer {
+  grid-area: ft;
+  padding: 10px;
+  background-color: cornflowerblue;
+}
+/* Responsive layout */
+@media (max-width: 320px) {
+  .container {
+    display: grid;
+    height: 315vh;
+    width: 100%;
+    grid-template-columns: 290px;
+    grid-template-rows: 150px 650px 1fr;
+    grid-template-areas:
+      "hd"
+      "feat"
+      "main"
+      "ft";
+    border: 5px solid yellow;
+  }
+}
+  @media (min-width: 600px) and (max-width: 900px){
+    .container{
+      display: grid;
+      height: 100%;
+      width: 100%;
+      grid-template-columns: 950px;
+      grid-template-rows: 175px 600px 900px 1fr;
+      grid-template-areas: 
+      "hd hd hd hd hd hd hd hd"
+      "feat feat feat feat feat feat feat feat"
+      "main main main main main main main main"
+      "ft ft ft ft ft ft ft ft";
+      border: 5px solid purple;
+    }
+  }
